@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./fontawesome-free-5.15.3-web/css/all.css">
+    <title>LIBRARY MANAGEMENT</title>
+</head>
+<style>
+    *{margin: 0;
+      padding: 0;
+       box-sizing: border-box;}
+    body{ width: 100%;
+          height: 100%;}   
+    .box{display: flex;}   
+
+    .head{width:100%;
+          height:50px;
+          background-color: rgb(32, 131, 12);
+          border: solid rgb(32, 131, 12);}
+    
+    .htext{color: rgb(32, 131, 12);
+           background-color: white;
+           width: 300px;
+           padding-left: 50px;
+           margin-top: 10px;
+           margin-left: 505px;
+           border-radius: 10px;
+        }    
+        
+     .myfooter{height: 30px; background-color: green;
+      color: white;
+      text-align: center;
+      margin-top: 18px;
+      padding: 10px;}    
+
+    .left{height:100%;
+          border-right: 2px solid rgb(32, 131, 12);
+          width: 30%;
+          }
+
+    .right{width: 70%;
+           height:100%;
+          border-left: 2px solid rgb(32, 131, 12);}      
+      
+    
+    .btn{
+        padding-left: 7px;
+        padding-right: 5px;
+         text-align: center;
+         margin-left:10px;
+         font-size: 15px;
+         }
+
+    .activep{background-color: rgb(32, 131, 12);
+            color: white;
+            width: 378px;}     
+    
+    .active{background-color: rgb(32, 131, 12);
+            color: white;
+            width: 377px; }     
+
+    .btn:hover{ background-color: rgb(32, 131, 12);
+                color: white;
+                width: 377px;
+    }       
+
+    hr{margin-top: 4px;
+        margin-left: 30px;
+        width: 340px;
+       border: solid rgb(32, 131, 12) 2px;}
+    .fose{margin-left: 20px;}   
+
+    .foseimg{margin-left: 300px;
+             margin-top: 70px;}
+    
+    .foseh {margin-left: 120px;
+             margin-top: 10px;
+             text-decoration: underline;}
+
+    .abt{margin-left: 360px;
+         margin-top: 80px;} 
+
+
+    .edit{margin-top: 4px;}
+    
+    .btnx{border-radius: 40%;
+        margin-top: 7px;
+          width: 23px;
+          height: 23px;
+          background-color: white;
+          border: 0px ;}
+
+    .blka{display: block;
+         float: right;
+          background-color: green;}
+               
+    .blk{display: block;
+         float: right;
+         margin-right: 12px;
+         margin-bottom: 5px;}   
+    
+    .mt{margin-top: 3px;
+        padding-top: 10px;
+        padding-bottom: 10px;} 
+      
+     
+    .nodisp{display:none;}
+    .ndp{ display: none;
+          text-align: center;
+           margin-top: 30%;}      
+</style>
+<body>
+    <div class="head"> <h3 class="htext">LIBRARY MANAGER</h3> </div>
+    <div class="box">
+        <div class="left">
+            
+            <div class="btn active p1 edit">
+                <button class="btnx blka" onclick=" del1();"><span class="fas fa-times x1"></span></button>
+               <div onclick="fose();" class="mt">FUNDAMENTALS OF SOFTWARE ENGINEERING </div> 
+                
+            </div>
+            <hr class="hr1">
+            <div class="btn p2 edit">
+                <button class="btnx blk" onclick=" del2();">
+                    <span class="fas fa-times x2"></span>
+                </button>
+                <div onclick="pij();" class="mt">JAVA PROGRAMMING</div>
+            </div>
+            <hr class="hr2">
+            <div class="btn p3 edit"  >
+                <button class="btnx blk" onclick=" del3();"><span class="fas fa-times x3"></span></button>
+                <div onclick="ita();" class="mt">INTRO TO ACCOUNTING</div>
+            </div>
+            <hr class="hr3">
+            <div class="btn p4 edit">
+                <button class="btnx blk" onclick=" del4();"><span class="fas fa-times x4"></span></button>
+                <div onclick="eamos();" class="mt">EVOLUTION AND MAINTENANCE OF SE</div> 
+            </div>
+            <hr class="hr4">
+            <div class="btn p5 edit"> 
+               <button class="btnx blk" onclick=" del5();"><span class="fas fa-times x5"></span></button>
+               <div onclick="itag();" class="mt">INTRO TO AGRICULTURE</div>
+            </div>
+            <hr class="hr5">
+            <div class="btn p6 edit">
+                <button class="btnx blk" onclick=" del6();"><span class="fas fa-times x6"></span></button>
+                <div onclick="cd();" class="mt">CLOUD DEVELOPMENT</div>
+            </div>
+            <hr class="hr6">
+            <div class="btn p7 edit">
+                <button class="btnx blk" onclick=" del7();"><span class="fas fa-times x7"></span></button>
+                <div onclick="focf();" class="mt">FUNDAMENTALS OF CHRISTIAN FAITH</div> 
+            </div>
+            <hr class="hr7">
+            <div class="btn p8 edit">
+                <button class="btnx blk" onclick=" del8();"><span class="fas fa-times x8"></span></button>
+                <div onclick="itp();" class="mt">INTRO TO PYTHON</div>
+            </div>
+            <hr class="hr8">
+            <div class="btn p9 edit"> 
+                <button class="btnx blk" onclick=" del9();"><span class="fas fa-times x9"></span></button>
+                <div onclick="wd();" class="mt">WEB DEVELOPMENT</div>
+            </div>
+            <hr class="hr9">
+            <div class="btn p10 edit">
+                <button class="btnx blk" onclick=" del10();"><span class="fas fa-times x10"></span></button>
+                <div onclick="cs();" class="mt">CYBER SECURITY</div>
+            </div>
+            <hr class="hr10">
+            <div class="btn p11 edit">
+                <button class="btnx blk" onclick=" del11();"><span class="fas fa-times x11"></span></button>
+                <div onclick="os();" class="mt">OPERATING SYSTEMS</div>
+            </div>
+            <hr class="hr11">
+            <div class="btn p12 edit">
+                <button class="btnx blk" onclick=" del12();"><span class="fas fa-times x12"></span></button>
+                <div onclick="mc();" class="mt">MARRIAGE COUNSELLING </div>
+            </div>
+            <hr class="hr12">
+            
+
+
+        </div>
+        <div class="right">
+
+            <h1 class="ndp">SELECT A BOOK</h1>
+            <div class="fose move">
+                <h2 class="foseh">BOOK: FUNDAMENTALS OF SOFTWARE ENGINEERING</h2>
+                <div class="foseimg"><img src="./IMAGES/Gun.jpg" alt=""></div>
+                <h2 class="abt">ABOUT: <br> </h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Tempora quasi officia, ratione quidem praesentium earum iusto illo totam 
+                    impedit labore error qui quam ab perferendis veniam magni, dolores repellat
+                    fugit deserunt! Porro magni at inventore fuga deserunt? Cumque earum ducimus
+                    nulla, magnam officia fuga adipisci est quod asperiores in expedita!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda totam veritatis 
+                    quo, suscipit quae eligendi provident consequuntur sapiente ipsum nemo quos quam optio ad,
+                    repudiandae fuga excepturi quis obcaecati labore mollitia? Ipsa magnam beatae voluptatum eum,
+                    nostrum consequuntur vel odit aperiam vitae, soluta et! Porro officiis soluta commodi aperiam eligendi?
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea dolore atque facere, sequi magni unde architecto 
+                    accusamus ipsum impedit asperiores eius aliquam, quasi nam quo, corporis cupiditate aperiam deserunt. Praesentium,
+                    commodi cum corporis, corrupti nesciunt distinctio rem aliquam totam reprehenderit vitae error asperiores, voluptate
+                    repellat quo quasi in? Dolore commodi explicabo repudiandae vel excepturi, maxime quaerat laborum, nisi minima
+                    quia ab itaque culpa eius eos ut neque atque, pariatur sit? Eum assumenda delectus labore deserunt sit doloribus 
+                    harum soluta quam inventore facilis provident esse quidem aut tempora, recusandae
+                    dolore praesentium fugiat maiores pariatur necessitatibus repellendus, facere ipsum dolorem. Quisquam, explicabo?
+               </p>
+            </div>
+
+            <div class="fose pij nodisp">
+                <h2 class="pijh">BOOK: PROGRAMMING IN JAVA</h2>
+                <div class="foseimg"><img src="./IMAGES/Gun.jpg" alt=""></div>
+                <h2 class="abt">ABOUT: <br> </h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Tempora quasi officia, ratione quidem praesentium earum iusto illo totam 
+                    impedit labore error qui quam ab perferendis veniam magni, dolores repellat
+                    fugit deserunt! Porro magni at inventore fuga deserunt? Cumque earum ducimus
+                    nulla, magnam officia fuga adipisci est quod asperiores in expedita!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda totam veritatis 
+                    quo, suscipit quae eligendi provident consequuntur sapiente ipsum nemo quos quam optio ad,
+                    repudiandae fuga excepturi quis obcaecati labore mollitia? Ipsa magnam beatae voluptatum eum,
+                    nostrum consequuntur vel odit aperiam vitae, soluta et! Porro officiis soluta commodi aperiam eligendi?
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea dolore atque facere, sequi magni unde architecto 
+                    accusamus ipsum impedit asperiores eius aliquam, quasi nam quo, corporis cupiditate aperiam deserunt. Praesentium,
+                    commodi cum corporis, corrupti nesciunt distinctio rem aliquam totam reprehenderit vitae error asperiores, voluptate
+                    repellat quo quasi in? Dolore commodi explicabo repudiandae vel excepturi, maxime quaerat laborum, nisi minima
+                    quia ab itaque culpa eius eos ut neque atque, pariatur sit? Eum assumenda delectus labore deserunt sit doloribus 
+                    harum soluta quam inventore facilis provident esse quidem aut tempora, recusandae
+                    dolore praesentium fugiat maiores pariatur necessitatibus repellendus, facere ipsum dolorem. Quisquam, explicabo?
+               </p>
+            </div>
+
+            <div class="fose ita nodisp ">
+                <h2 class="itah">BOOK: INTRODUCTION TO ACCOUNTING</h2>
+                <div class="foseimg"><img src="./IMAGES/Gun.jpg" alt=""></div>
+                <h2 class="abt">ABOUT: <br> </h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Tempora quasi officia, ratione quidem praesentium earum iusto illo totam 
+                    impedit labore error qui quam ab perferendis veniam magni, dolores repellat
+                    fugit deserunt! Porro magni at inventore fuga deserunt? Cumque earum ducimus
+                    nulla, magnam officia fuga adipisci est quod asperiores in expedita!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda totam veritatis 
+                    quo, suscipit quae eligendi provident consequuntur sapiente ipsum nemo quos quam optio ad,
+                    repudiandae fuga excepturi quis obcaecati labore mollitia? Ipsa magnam beatae voluptatum eum,
+                    nostrum consequuntur vel odit aperiam vitae, soluta et! Porro officiis soluta commodi aperiam eligendi?
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea dolore atque facere, sequi magni unde architecto 
+                    accusamus ipsum impedit asperiores eius aliquam, quasi nam quo, corporis cupiditate aperiam deserunt. Praesentium,
+                    commodi cum corporis, corrupti nesciunt distinctio rem aliquam totam reprehenderit vitae error asperiores, voluptate
+                    repellat quo quasi in? Dolore commodi explicabo repudiandae vel excepturi, maxime quaerat laborum, nisi minima
+                    quia ab itaque culpa eius eos ut neque atque, pariatur sit? Eum assumenda delectus labore deserunt sit doloribus 
+                    harum soluta quam inventore facilis provident esse quidem aut tempora, recusandae
+                    dolore praesentium fugiat maiores pariatur necessitatibus repellendus, facere ipsum dolorem. Quisquam, explicabo?
+               </p>
+            </div>
+
+            <div class="fose eamos nodisp ">
+                <h2 class="eamosh">BOOK: EVOLUTION AND MAINTENANCE OF SE</h2>
+                <div class="foseimg"><img src="./IMAGES/Gun.jpg" alt=""></div>
+                <h2 class="abt">ABOUT: <br> </h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Tempora quasi officia, ratione quidem praesentium earum iusto illo totam 
+                    impedit labore error qui quam ab perferendis veniam magni, dolores repellat
+                    fugit deserunt! Porro magni at inventore fuga deserunt? Cumque earum ducimus
+                    nulla, magnam officia fuga adipisci est quod asperiores in expedita!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda totam veritatis 
+                    quo, suscipit quae eligendi provident consequuntur sapiente ipsum nemo quos quam optio ad,
+                    repudiandae fuga excepturi quis obcaecati labore mollitia? Ipsa magnam beatae voluptatum eum,
+                    nostrum consequuntur vel odit aperiam vitae, soluta et! Porro officiis soluta commodi aperiam eligendi?
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea dolore atque facere, sequi magni unde architecto 
+                    accusamus ipsum impedit asperiores eius aliquam, quasi nam quo, corporis cupiditate aperiam deserunt. Praesentium,
+                    commodi cum corporis, corrupti nesciunt distinctio rem aliquam totam reprehenderit vitae error asperiores, voluptate
+                    repellat quo quasi in? Dolore commodi explicabo repudiandae vel excepturi, maxime quaerat laborum, nisi minima
+                    quia ab itaque culpa eius eos ut neque atque, pariatur sit? Eum assumenda delectus labore deserunt sit doloribus 
+                    harum soluta quam inventore facilis provident esse quidem aut tempora, recusandae
+                    dolore praesentium fugiat maiores pariatur necessitatibus repellendus, facere ipsum dolorem. Quisquam, explicabo?
+               </p>
+            </div>
+
+            <div class="fose itag nodisp ">
+                <h2 class="itagh">BOOK: INTRODUCTION TO AGRICULTURE</h2>
+                <div class="foseimg"><img src="./IMAGES/Gun.jpg" alt=""></div>
+                <h2 class="abt">ABOUT: <br> </h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Tempora quasi officia, ratione quidem praesentium earum iusto illo totam 
+                    impedit labore error qui quam ab perferendis veniam magni, dolores repellat
+                    fugit deserunt! Porro magni at inventore fuga deserunt? Cumque earum ducimus
+                    nulla, magnam officia fuga adipisci est quod asperiores in expedita!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda totam veritatis 
+                    quo, suscipit quae eligendi provident consequuntur sapiente ipsum nemo quos quam optio ad,
+                    repudiandae fuga excepturi quis obcaecati labore mollitia? Ipsa magnam beatae voluptatum eum,
+                    nostrum consequuntur vel odit aperiam vitae, soluta et! Porro officiis soluta commodi aperiam eligendi?
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea dolore atque facere, sequi magni unde architecto 
+                    accusamus ipsum impedit asperiores eius aliquam, quasi nam quo, corporis cupiditate aperiam deserunt. Praesentium,
+                    commodi cum corporis, corrupti nesciunt distinctio rem aliquam totam reprehenderit vitae error asperiores, voluptate
+                    repellat quo quasi in? Dolore commodi explicabo repudiandae vel excepturi, maxime quaerat laborum, nisi minima
+                    quia ab itaque culpa eius eos ut neque atque, pariatur sit? Eum assumenda delectus labore deserunt sit doloribus 
+                    harum soluta quam inventore facilis provident esse quidem aut tempora, recusandae
+                    dolore praesentium fugiat maiores pariatur necessitatibus repellendus, facere ipsum dolorem. Quisquam, explicabo?
+               </p>
+            </div>
+    
+            <div class="fose cd nodisp ">
+                <h2 class="cdh">BOOK: CLOUD DEVELOPMENT</h2>
+                <div class="foseimg"><img src="./IMAGES/Gun.jpg" alt=""></div>
+                <h2 class="abt">ABOUT: <br> </h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Tempora quasi officia, ratione quidem praesentium earum iusto illo totam 
+                    impedit labore error qui quam ab perferendis veniam magni, dolores repellat
+                    fugit deserunt! Porro magni at inventore fuga deserunt? Cumque earum ducimus
+                    nulla, magnam officia fuga adipisci est quod asperiores in expedita!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda totam veritatis 
+                    quo, suscipit quae eligendi provident consequuntur sapiente ipsum nemo quos quam optio ad,
+                    repudiandae fuga excepturi quis obcaecati labore mollitia? Ipsa magnam beatae voluptatum eum,
+                    nostrum consequuntur vel odit aperiam vitae, soluta et! Porro officiis soluta commodi aperiam eligendi?
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea dolore atque facere, sequi magni unde architecto 
+                    accusamus ipsum impedit asperiores eius aliquam, quasi nam quo, corporis cupiditate aperiam deserunt. Praesentium,
+                    commodi cum corporis, corrupti nesciunt distinctio rem aliquam totam reprehenderit vitae error asperiores, voluptate
+                    repellat quo quasi in? Dolore commodi explicabo repudiandae vel excepturi, maxime quaerat laborum, nisi minima
+                    quia ab itaque culpa eius eos ut neque atque, pariatur sit? Eum assumenda delectus labore deserunt sit doloribus 
+                    harum soluta quam inventore facilis provident esse quidem aut tempora, recusandae
+                    dolore praesentium fugiat maiores pariatur necessitatibus repellendus, facere ipsum dolorem. Quisquam, explicabo?
+               </p>
+            </div>
+    
+            <div class="fose focf nodisp ">
+                <h2 class="focfh">BOOK: FUNDAMENTALS OF CHRISTIAN FAITH</h2>
+                <div class="foseimg"><img src="./IMAGES/Gun.jpg" alt=""></div>
+                <h2 class="abt">ABOUT: <br> </h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Tempora quasi officia, ratione quidem praesentium earum iusto illo totam 
+                    impedit labore error qui quam ab perferendis veniam magni, dolores repellat
+                    fugit deserunt! Porro magni at inventore fuga deserunt? Cumque earum ducimus
+                    nulla, magnam officia fuga adipisci est quod asperiores in expedita!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda totam veritatis 
+                    quo, suscipit quae eligendi provident consequuntur sapiente ipsum nemo quos quam optio ad,
+                    repudiandae fuga excepturi quis obcaecati labore mollitia? Ipsa magnam beatae voluptatum eum,
+                    nostrum consequuntur vel odit aperiam vitae, soluta et! Porro officiis soluta commodi aperiam eligendi?
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea dolore atque facere, sequi magni unde architecto 
+                    accusamus ipsum impedit asperiores eius aliquam, quasi nam quo, corporis cupiditate aperiam deserunt. Praesentium,
+                    commodi cum corporis, corrupti nesciunt distinctio rem aliquam totam reprehenderit vitae error asperiores, voluptate
+                    repellat quo quasi in? Dolore commodi explicabo repudiandae vel excepturi, maxime quaerat laborum, nisi minima
+                    quia ab itaque culpa eius eos ut neque atque, pariatur sit? Eum assumenda delectus labore deserunt sit doloribus 
+                    harum soluta quam inventore facilis provident esse quidem aut tempora, recusandae
+                    dolore praesentium fugiat maiores pariatur necessitatibus repellendus, facere ipsum dolorem. Quisquam, explicabo?
+               </p>
+            </div>
+    
+            <div class="fose itp nodisp">
+                <h2 class="itph">BOOK: INTRODUCTION TO PYTHON</h2>
+                <div class="foseimg"><img src="./IMAGES/Gun.jpg" alt=""></div>
+                <h2 class="abt">ABOUT: <br> </h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Tempora quasi officia, ratione quidem praesentium earum iusto illo totam 
+                    impedit labore error qui quam ab perferendis veniam magni, dolores repellat
+                    fugit deserunt! Porro magni at inventore fuga deserunt? Cumque earum ducimus
+                    nulla, magnam officia fuga adipisci est quod asperiores in expedita!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda totam veritatis 
+                    quo, suscipit quae eligendi provident consequuntur sapiente ipsum nemo quos quam optio ad,
+                    repudiandae fuga excepturi quis obcaecati labore mollitia? Ipsa magnam beatae voluptatum eum,
+                    nostrum consequuntur vel odit aperiam vitae, soluta et! Porro officiis soluta commodi aperiam eligendi?
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea dolore atque facere, sequi magni unde architecto 
+                    accusamus ipsum impedit asperiores eius aliquam, quasi nam quo, corporis cupiditate aperiam deserunt. Praesentium,
+                    commodi cum corporis, corrupti nesciunt distinctio rem aliquam totam reprehenderit vitae error asperiores, voluptate
+                    repellat quo quasi in? Dolore commodi explicabo repudiandae vel excepturi, maxime quaerat laborum, nisi minima
+                    quia ab itaque culpa eius eos ut neque atque, pariatur sit? Eum assumenda delectus labore deserunt sit doloribus 
+                    harum soluta quam inventore facilis provident esse quidem aut tempora, recusandae
+                    dolore praesentium fugiat maiores pariatur necessitatibus repellendus, facere ipsum dolorem. Quisquam, explicabo?
+               </p>
+            </div>
+    
+            <div class="fose wd nodisp ">
+                <h2 class="wdh">BOOK: WEB DEVELOPMENT</h2>
+                <div class="foseimg"><img src="./IMAGES/Gun.jpg" alt=""></div>
+                <h2 class="abt">ABOUT: <br> </h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Tempora quasi officia, ratione quidem praesentium earum iusto illo totam 
+                    impedit labore error qui quam ab perferendis veniam magni, dolores repellat
+                    fugit deserunt! Porro magni at inventore fuga deserunt? Cumque earum ducimus
+                    nulla, magnam officia fuga adipisci est quod asperiores in expedita!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda totam veritatis 
+                    quo, suscipit quae eligendi provident consequuntur sapiente ipsum nemo quos quam optio ad,
+                    repudiandae fuga excepturi quis obcaecati labore mollitia? Ipsa magnam beatae voluptatum eum,
+                    nostrum consequuntur vel odit aperiam vitae, soluta et! Porro officiis soluta commodi aperiam eligendi?
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea dolore atque facere, sequi magni unde architecto 
+                    accusamus ipsum impedit asperiores eius aliquam, quasi nam quo, corporis cupiditate aperiam deserunt. Praesentium,
+                    commodi cum corporis, corrupti nesciunt distinctio rem aliquam totam reprehenderit vitae error asperiores, voluptate
+                    repellat quo quasi in? Dolore commodi explicabo repudiandae vel excepturi, maxime quaerat laborum, nisi minima
+                    quia ab itaque culpa eius eos ut neque atque, pariatur sit? Eum assumenda delectus labore deserunt sit doloribus 
+                    harum soluta quam inventore facilis provident esse quidem aut tempora, recusandae
+                    dolore praesentium fugiat maiores pariatur necessitatibus repellendus, facere ipsum dolorem. Quisquam, explicabo?
+               </p>
+            </div>
+    
+            <div class="fose cs nodisp">
+                <h2 class="csh">BOOK: CYBER SECURITY</h2>
+                <div class="foseimg"><img src="./IMAGES/Gun.jpg" alt=""></div>
+                <h2 class="abt">ABOUT: <br> </h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Tempora quasi officia, ratione quidem praesentium earum iusto illo totam 
+                    impedit labore error qui quam ab perferendis veniam magni, dolores repellat
+                    fugit deserunt! Porro magni at inventore fuga deserunt? Cumque earum ducimus
+                    nulla, magnam officia fuga adipisci est quod asperiores in expedita!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda totam veritatis 
+                    quo, suscipit quae eligendi provident consequuntur sapiente ipsum nemo quos quam optio ad,
+                    repudiandae fuga excepturi quis obcaecati labore mollitia? Ipsa magnam beatae voluptatum eum,
+                    nostrum consequuntur vel odit aperiam vitae, soluta et! Porro officiis soluta commodi aperiam eligendi?
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea dolore atque facere, sequi magni unde architecto 
+                    accusamus ipsum impedit asperiores eius aliquam, quasi nam quo, corporis cupiditate aperiam deserunt. Praesentium,
+                    commodi cum corporis, corrupti nesciunt distinctio rem aliquam totam reprehenderit vitae error asperiores, voluptate
+                    repellat quo quasi in? Dolore commodi explicabo repudiandae vel excepturi, maxime quaerat laborum, nisi minima
+                    quia ab itaque culpa eius eos ut neque atque, pariatur sit? Eum assumenda delectus labore deserunt sit doloribus 
+                    harum soluta quam inventore facilis provident esse quidem aut tempora, recusandae
+                    dolore praesentium fugiat maiores pariatur necessitatibus repellendus, facere ipsum dolorem. Quisquam, explicabo?
+               </p>
+            </div>
+    
+            <div class="fose os nodisp ">
+                <h2 class="osh">BOOK: OPERATING SYSTEMS</h2>
+                <div class="foseimg"><img src="./IMAGES/Gun.jpg" alt=""></div>
+                <h2 class="abt">ABOUT: <br> </h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Tempora quasi officia, ratione quidem praesentium earum iusto illo totam 
+                    impedit labore error qui quam ab perferendis veniam magni, dolores repellat
+                    fugit deserunt! Porro magni at inventore fuga deserunt? Cumque earum ducimus
+                    nulla, magnam officia fuga adipisci est quod asperiores in expedita!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda totam veritatis 
+                    quo, suscipit quae eligendi provident consequuntur sapiente ipsum nemo quos quam optio ad,
+                    repudiandae fuga excepturi quis obcaecati labore mollitia? Ipsa magnam beatae voluptatum eum,
+                    nostrum consequuntur vel odit aperiam vitae, soluta et! Porro officiis soluta commodi aperiam eligendi?
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea dolore atque facere, sequi magni unde architecto 
+                    accusamus ipsum impedit asperiores eius aliquam, quasi nam quo, corporis cupiditate aperiam deserunt. Praesentium,
+                    commodi cum corporis, corrupti nesciunt distinctio rem aliquam totam reprehenderit vitae error asperiores, voluptate
+                    repellat quo quasi in? Dolore commodi explicabo repudiandae vel excepturi, maxime quaerat laborum, nisi minima
+                    quia ab itaque culpa eius eos ut neque atque, pariatur sit? Eum assumenda delectus labore deserunt sit doloribus 
+                    harum soluta quam inventore facilis provident esse quidem aut tempora, recusandae
+                    dolore praesentium fugiat maiores pariatur necessitatibus repellendus, facere ipsum dolorem. Quisquam, explicabo?
+               </p>
+            </div>
+    
+            <div class="fose mc nodisp ">
+                <h2 class="mch">BOOK: MARRIAGE COUNSELLING</h2>
+                <div class="foseimg"><img src="./IMAGES/Gun.jpg" alt=""></div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Tempora quasi officia, ratione quidem praesentium earum iusto illo totam 
+                    impedit labore error qui quam ab perferendis veniam magni, dolores repellat
+                    fugit deserunt! Porro magni at inventore fuga deserunt? Cumque earum ducimus
+                    nulla, magnam officia fuga adipisci est quod asperiores in expedita!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda totam veritatis 
+                    quo, suscipit quae eligendi provident consequuntur sapiente ipsum nemo quos quam optio ad,
+                    repudiandae fuga excepturi quis obcaecati labore mollitia? Ipsa magnam beatae voluptatum eum,
+                    nostrum consequuntur vel odit aperiam vitae, soluta et! Porro officiis soluta commodi aperiam eligendi?
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea dolore atque facere, sequi magni unde architecto 
+                    accusamus ipsum impedit asperiores eius aliquam, quasi nam quo, corporis cupiditate aperiam deserunt. Praesentium,
+                    commodi cum corporis, corrupti nesciunt distinctio rem aliquam totam reprehenderit vitae error asperiores, voluptate
+                    repellat quo quasi in? Dolore commodi explicabo repudiandae vel excepturi, maxime quaerat laborum, nisi minima
+                    quia ab itaque culpa eius eos ut neque atque, pariatur sit? Eum assumenda delectus labore deserunt sit doloribus 
+                    harum soluta quam inventore facilis provident esse quidem aut tempora, recusandae
+                    dolore praesentium fugiat maiores pariatur necessitatibus repellendus, facere ipsum dolorem. Quisquam, explicabo?
+               </p>
+            </div>
+        </div>
+    </div>
+    <footer class="myfooter">
+        Copyright|| SOFTWARE ENGINEERING
+    </footer>
+
+    <script>
+
+        function del1(){
+            document.querySelector(".x1").style.display = "none";
+            document.querySelector(".p1").style.display = "none";
+            document.querySelector(".fose").style.display = "none";
+            document.querySelector(".ndp").style.display = "block";
+            document.querySelector(".pij").style.display = "none";
+            document.querySelector(".ita").style.display = "none";
+            document.querySelector(".eamos").style.display = "none";
+            document.querySelector(".itag").style.display = "none";
+            document.querySelector(".cd").style.display = "none";
+            document.querySelector(".focf").style.display = "none";
+            document.querySelector(".itp").style.display = "none";
+            document.querySelector(".wd").style.display = "none";
+            document.querySelector(".cs").style.display = "none";
+            document.querySelector(".os").style.display = "none";
+            document.querySelector(".mc").style.display = "none";
+    
+    
+        }
+
+        function del2(){
+            document.querySelector(".x2").style.display = "none";
+            document.querySelector(".p2").style.display = "none";
+            document.querySelector(".pij").style.display = "none";
+            document.querySelector(".hr2").style.display = "none";
+            document.querySelector(".ndp").style.display = "block";
+            document.querySelector(".fose").style.display = "none";
+            document.querySelector(".ita").style.display = "none";
+            document.querySelector(".eamos").style.display = "none";
+            document.querySelector(".itag").style.display = "none";
+            document.querySelector(".cd").style.display = "none";
+            document.querySelector(".focf").style.display = "none";
+            document.querySelector(".itp").style.display = "none";
+            document.querySelector(".wd").style.display = "none";
+            document.querySelector(".cs").style.display = "none";
+            document.querySelector(".os").style.display = "none";
+            document.querySelector(".mc").style.display = "none";
+            
+        }
+
+        function del3(){
+            document.querySelector(".x3").style.display = "none";
+            document.querySelector(".p3").style.display = "none";
+            document.querySelector(".ita").style.display = "none";
+            document.querySelector(".hr3").style.display = "none";
+            document.querySelector(".ndp").style.display = "block";
+            document.querySelector(".fose").style.display = "none";
+            document.querySelector(".pij").style.display = "none";
+            document.querySelector(".eamos").style.display = "none";
+            document.querySelector(".itag").style.display = "none";
+            document.querySelector(".cd").style.display = "none";
+            document.querySelector(".focf").style.display = "none";
+            document.querySelector(".itp").style.display = "none";
+            document.querySelector(".wd").style.display = "none";
+            document.querySelector(".cs").style.display = "none";
+            document.querySelector(".os").style.display = "none";
+            document.querySelector(".mc").style.display = "none";
+        
+
+
+        }
+
+        function del4(){
+            document.querySelector(".x4").style.display = "none";
+            document.querySelector(".p4").style.display = "none";
+            document.querySelector(".eamos").style.display = "none";
+            document.querySelector(".hr4").style.display = "none";
+            document.querySelector(".ndp").style.display = "block";
+            document.querySelector(".fose").style.display = "none";
+            document.querySelector(".pij").style.display = "none";
+            document.querySelector(".ita").style.display = "none";
+            document.querySelector(".itag").style.display = "none";
+            document.querySelector(".cd").style.display = "none";
+            document.querySelector(".focf").style.display = "none";
+            document.querySelector(".itp").style.display = "none";
+            document.querySelector(".wd").style.display = "none";
+            document.querySelector(".cs").style.display = "none";
+            document.querySelector(".os").style.display = "none";
+            document.querySelector(".mc").style.display = "none";
+
+        }
+
+        function del5(){
+            document.querySelector(".x5").style.display = "none";
+            document.querySelector(".p5").style.display = "none";
+            document.querySelector(".itag").style.display = "none";
+            document.querySelector(".hr5").style.display = "none";
+            document.querySelector(".ndp").style.display = "block";
+            document.querySelector(".fose").style.display = "none";
+            document.querySelector(".pij").style.display = "none";
+            document.querySelector(".ita").style.display = "none";
+            document.querySelector(".eamos").style.display = "none";
+            document.querySelector(".cd").style.display = "none";
+            document.querySelector(".focf").style.display = "none";
+            document.querySelector(".itp").style.display = "none";
+            document.querySelector(".wd").style.display = "none";
+            document.querySelector(".cs").style.display = "none";
+            document.querySelector(".os").style.display = "none";
+            document.querySelector(".mc").style.display = "none";
+        }
+
+        function del6(){
+            document.querySelector(".x6").style.display = "none";
+            document.querySelector(".p6").style.display = "none";
+            document.querySelector(".cd").style.display = "none";
+            document.querySelector(".hr6").style.display = "none";
+            document.querySelector(".ndp").style.display = "block";
+            document.querySelector(".fose").style.display = "none";
+            document.querySelector(".pij").style.display = "none";
+            document.querySelector(".ita").style.display = "none";
+            document.querySelector(".eamos").style.display = "none";
+            document.querySelector(".itag").style.display = "none";
+            document.querySelector(".focf").style.display = "none";
+            document.querySelector(".itp").style.display = "none";
+            document.querySelector(".wd").style.display = "none";
+            document.querySelector(".cs").style.display = "none";
+            document.querySelector(".os").style.display = "none";
+            document.querySelector(".mc").style.display = "none";
+        }
+
+        function del7(){
+            document.querySelector(".x7").style.display = "none";
+            document.querySelector(".p7").style.display = "none";
+            document.querySelector(".focf").style.display = "none";
+            document.querySelector(".hr7").style.display = "none";
+            document.querySelector(".ndp").style.display = "block";
+            document.querySelector(".fose").style.display = "none";
+            document.querySelector(".pij").style.display = "none";
+            document.querySelector(".ita").style.display = "none";
+            document.querySelector(".eamos").style.display = "none";
+            document.querySelector(".itag").style.display = "none";
+            document.querySelector(".cd").style.display = "none";
+            document.querySelector(".itp").style.display = "none";
+            document.querySelector(".wd").style.display = "none";
+            document.querySelector(".cs").style.display = "none";
+            document.querySelector(".os").style.display = "none";
+            document.querySelector(".mc").style.display = "none";
+        }
+
+        function del8(){
+            document.querySelector(".x8").style.display = "none";
+            document.querySelector(".p8").style.display = "none";
+            document.querySelector(".itp").style.display = "none";
+            document.querySelector(".hr8").style.display = "none";
+            document.querySelector(".ndp").style.display = "block";
+            document.querySelector(".fose").style.display = "none";
+            document.querySelector(".pij").style.display = "none";
+            document.querySelector(".ita").style.display = "none";
+            document.querySelector(".eamos").style.display = "none";
+            document.querySelector(".itag").style.display = "none";
+            document.querySelector(".cd").style.display = "none";
+            document.querySelector(".focf").style.display = "none";
+            document.querySelector(".wd").style.display = "none";
+            document.querySelector(".cs").style.display = "none";
+            document.querySelector(".os").style.display = "none";
+            document.querySelector(".mc").style.display = "none";
+        }
+
+        function del9(){
+            document.querySelector(".x9").style.display = "none";
+            document.querySelector(".p9").style.display = "none";
+            document.querySelector(".wd").style.display = "none";
+            document.querySelector(".hr9").style.display = "none";
+            document.querySelector(".ndp").style.display = "block";
+            document.querySelector(".fose").style.display = "none";
+            document.querySelector(".pij").style.display = "none";
+            document.querySelector(".ita").style.display = "none";
+            document.querySelector(".eamos").style.display = "none";
+            document.querySelector(".itag").style.display = "none";
+            document.querySelector(".cd").style.display = "none";
+            document.querySelector(".focf").style.display = "none";
+            document.querySelector(".itp").style.display = "none";
+            document.querySelector(".cs").style.display = "none";
+            document.querySelector(".os").style.display = "none";
+            document.querySelector(".mc").style.display = "none";
+        }
+
+        function del10(){
+            document.querySelector(".x10").style.display = "none";
+            document.querySelector(".p10").style.display = "none";
+            document.querySelector(".cs").style.display = "none";
+            document.querySelector(".hr10").style.display = "none";
+            document.querySelector(".ndp").style.display = "block";
+            document.querySelector(".fose").style.display = "none";
+            document.querySelector(".pij").style.display = "none";
+            document.querySelector(".ita").style.display = "none";
+            document.querySelector(".eamos").style.display = "none";
+            document.querySelector(".itag").style.display = "none";
+            document.querySelector(".cd").style.display = "none";
+            document.querySelector(".focf").style.display = "none";
+            document.querySelector(".itp").style.display = "none";
+            document.querySelector(".wd").style.display = "none";
+            document.querySelector(".os").style.display = "none";
+            document.querySelector(".mc").style.display = "none";
+        }
+
+        function del11(){
+            document.querySelector(".x11").style.display = "none";
+            document.querySelector(".p11").style.display = "none";
+            document.querySelector(".os").style.display = "none";
+            document.querySelector(".hr11").style.display = "none";
+            document.querySelector(".ndp").style.display = "block";
+            document.querySelector(".fose").style.display = "none";
+            document.querySelector(".pij").style.display = "none";
+            document.querySelector(".ita").style.display = "none";
+            document.querySelector(".eamos").style.display = "none";
+            document.querySelector(".itag").style.display = "none";
+            document.querySelector(".cd").style.display = "none";
+            document.querySelector(".focf").style.display = "none";
+            document.querySelector(".itp").style.display = "none";
+            document.querySelector(".wd").style.display = "none";
+            document.querySelector(".cs").style.display = "none";
+            document.querySelector(".mc").style.display = "none";
+        }
+
+        function del12(){
+            document.querySelector(".x12").style.display = "none";
+            document.querySelector(".p12").style.display = "none";
+            document.querySelector(".mc").style.display = "none";
+            document.querySelector(".hr12").style.display = "none";
+            document.querySelector(".ndp").style.display = "block";
+            document.querySelector(".fose").style.display = "none";
+            document.querySelector(".pij").style.display = "none";
+            document.querySelector(".ita").style.display = "none";
+            document.querySelector(".eamos").style.display = "none";
+            document.querySelector(".itag").style.display = "none";
+            document.querySelector(".cd").style.display = "none";
+            document.querySelector(".focf").style.display = "none";
+            document.querySelector(".itp").style.display = "none";
+            document.querySelector(".wd").style.display = "none";
+            document.querySelector(".cs").style.display = "none";
+            document.querySelector(".os").style.display = "none";
+        }
+
+        function fose(){
+            document.querySelector(".fose").style.display = "block";
+            document.querySelector(".pij").style.display = "none";
+            document.querySelector(".ita").style.display = "none";
+            document.querySelector(".eamos").style.display = "none";
+            document.querySelector(".itag").style.display = "none";
+            document.querySelector(".cd").style.display = "none";
+            document.querySelector(".focf").style.display = "none";
+            document.querySelector(".itp").style.display = "none";
+            document.querySelector(".wd").style.display = "none";
+            document.querySelector(".cs").style.display = "none";
+            document.querySelector(".os").style.display = "none";
+            document.querySelector(".mc").style.display = "none";
+            document.querySelector(".p1").classList.add("active");
+            document.querySelector(".p2").classList.remove("active");
+            document.querySelector(".p3").classList.remove("active");
+            document.querySelector(".p4").classList.remove("active");
+            document.querySelector(".p5").classList.remove("active");
+            document.querySelector(".p6").classList.remove("active");
+            document.querySelector(".p7").classList.remove("active");
+            document.querySelector(".p8").classList.remove("active");
+            document.querySelector(".p9").classList.remove("active");
+            document.querySelector(".p10").classList.remove("active");
+            document.querySelector(".p11").classList.remove("active");
+            document.querySelector(".p12").classList.remove("active");
+            document.querySelector(".ndp").style.display = "none";
+
+        }
+        
+        function pij(){
+            document.querySelector(".fose").style.display = "none";
+            document.querySelector(".pij").style.display = "block";
+            document.querySelector(".ita").style.display = "none";
+            document.querySelector(".eamos").style.display = "none";
+            document.querySelector(".itag").style.display = "none";
+            document.querySelector(".cd").style.display = "none";
+            document.querySelector(".focf").style.display = "none";
+            document.querySelector(".itp").style.display = "none";
+            document.querySelector(".wd").style.display = "none";
+            document.querySelector(".cs").style.display = "none";
+            document.querySelector(".os").style.display = "none";
+            document.querySelector(".mc").style.display = "none";
+            document.querySelector(".p1").classList.remove("active");
+            document.querySelector(".p2").classList.add("active");
+            document.querySelector(".p3").classList.remove("active");
+            document.querySelector(".p4").classList.remove("active");
+            document.querySelector(".p5").classList.remove("active");
+            document.querySelector(".p6").classList.remove("active");
+            document.querySelector(".p7").classList.remove("active");
+            document.querySelector(".p8").classList.remove("active");
+            document.querySelector(".p9").classList.remove("active");
+            document.querySelector(".p10").classList.remove("active");
+            document.querySelector(".p11").classList.remove("active");
+            document.querySelector(".p12").classList.remove("active");
+            document.querySelector(".ndp").style.display = "none";
+           
+
+          
+
+        }
+        
+        function ita(){
+            document.querySelector(".fose").style.display = "none";
+            document.querySelector(".pij").style.display = "none";
+            document.querySelector(".ita").style.display = "block";
+            document.querySelector(".eamos").style.display = "none";
+            document.querySelector(".itag").style.display = "none";
+            document.querySelector(".cd").style.display = "none";
+            document.querySelector(".focf").style.display = "none";
+            document.querySelector(".itp").style.display = "none";
+            document.querySelector(".wd").style.display = "none";
+            document.querySelector(".cs").style.display = "none";
+            document.querySelector(".os").style.display = "none";
+            document.querySelector(".mc").style.display = "none";
+            document.querySelector(".p1").classList.remove("active");
+            document.querySelector(".p2").classList.remove("active");
+            document.querySelector(".p3").classList.add("active");
+            document.querySelector(".p4").classList.remove("active");
+            document.querySelector(".p5").classList.remove("active");
+            document.querySelector(".p6").classList.remove("active");
+            document.querySelector(".p7").classList.remove("active");
+            document.querySelector(".p8").classList.remove("active");
+            document.querySelector(".p9").classList.remove("active");
+            document.querySelector(".p10").classList.remove("active");
+            document.querySelector(".p11").classList.remove("active");
+            document.querySelector(".p12").classList.remove("active");
+            document.querySelector(".ndp").style.display = "none";
+
+
+           
+            
+        }
+
+        function eamos(){
+            document.querySelector(".fose").style.display = "none";
+            document.querySelector(".pij").style.display = "none";
+            document.querySelector(".ita").style.display = "none";
+            document.querySelector(".eamos").style.display = "block";
+            document.querySelector(".itag").style.display = "none";
+            document.querySelector(".cd").style.display = "none";
+            document.querySelector(".focf").style.display = "none";
+            document.querySelector(".itp").style.display = "none";
+            document.querySelector(".wd").style.display = "none";
+            document.querySelector(".cs").style.display = "none";
+            document.querySelector(".os").style.display = "none";
+            document.querySelector(".mc").style.display = "none";
+            document.querySelector(".p1").classList.remove("active");
+            document.querySelector(".p2").classList.remove("active");
+            document.querySelector(".p3").classList.remove("active");
+            document.querySelector(".p4").classList.add("active");
+            document.querySelector(".p5").classList.remove("active");
+            document.querySelector(".p6").classList.remove("active");
+            document.querySelector(".p7").classList.remove("active");
+            document.querySelector(".p8").classList.remove("active");
+            document.querySelector(".p9").classList.remove("active");
+            document.querySelector(".p10").classList.remove("active");
+            document.querySelector(".p11").classList.remove("active");
+            document.querySelector(".p12").classList.remove("active");
+            document.querySelector(".ndp").style.display = "none";
+            
+            
+            
+        }
+
+        function itag(){
+            document.querySelector(".fose").style.display = "none";
+            document.querySelector(".pij").style.display = "none";
+            document.querySelector(".ita").style.display = "none";
+            document.querySelector(".eamos").style.display = "none";
+            document.querySelector(".itag").style.display = "block";
+            document.querySelector(".cd").style.display = "none";
+            document.querySelector(".focf").style.display = "none";
+            document.querySelector(".itp").style.display = "none";
+            document.querySelector(".wd").style.display = "none";
+            document.querySelector(".cs").style.display = "none";
+            document.querySelector(".os").style.display = "none";
+            document.querySelector(".mc").style.display = "none";
+            document.querySelector(".p1").classList.remove("active");
+            document.querySelector(".p2").classList.remove("active");
+            document.querySelector(".p3").classList.remove("active");
+            document.querySelector(".p4").classList.remove("active");
+            document.querySelector(".p5").classList.add("active");
+            document.querySelector(".p6").classList.remove("active");
+            document.querySelector(".p7").classList.remove("active");
+            document.querySelector(".p8").classList.remove("active");
+            document.querySelector(".p9").classList.remove("active");
+            document.querySelector(".p10").classList.remove("active");
+            document.querySelector(".p11").classList.remove("active");
+            document.querySelector(".p12").classList.remove("active");
+            document.querySelector(".ndp").style.display = "none";
+            
+            
+        }
+
+        function cd(){
+            document.querySelector(".fose").style.display = "none";
+            document.querySelector(".pij").style.display = "none";
+            document.querySelector(".ita").style.display = "none";
+            document.querySelector(".eamos").style.display = "none";
+            document.querySelector(".itag").style.display = "none";
+            document.querySelector(".cd").style.display = "block";
+            document.querySelector(".focf").style.display = "none";
+            document.querySelector(".itp").style.display = "none";
+            document.querySelector(".wd").style.display = "none";
+            document.querySelector(".cs").style.display = "none";
+            document.querySelector(".os").style.display = "none";
+            document.querySelector(".mc").style.display = "none";
+            document.querySelector(".p1").classList.remove("active");
+            document.querySelector(".p2").classList.remove("active");
+            document.querySelector(".p3").classList.remove("active");
+            document.querySelector(".p4").classList.remove("active");
+            document.querySelector(".p5").classList.remove("active");
+            document.querySelector(".p6").classList.add("active");
+            document.querySelector(".p7").classList.remove("active");
+            document.querySelector(".p8").classList.remove("active");
+            document.querySelector(".p9").classList.remove("active");
+            document.querySelector(".p10").classList.remove("active");
+            document.querySelector(".p11").classList.remove("active");
+            document.querySelector(".p12").classList.remove("active");
+            document.querySelector(".ndp").style.display = "none";
+           
+            
+        }
+
+        function focf(){
+            document.querySelector(".fose").style.display = "none";
+            document.querySelector(".pij").style.display = "none";
+            document.querySelector(".ita").style.display = "none";
+            document.querySelector(".eamos").style.display = "none";
+            document.querySelector(".itag").style.display = "none";
+            document.querySelector(".cd").style.display = "none";
+            document.querySelector(".focf").style.display = "block";
+            document.querySelector(".itp").style.display = "none";
+            document.querySelector(".wd").style.display = "none";
+            document.querySelector(".cs").style.display = "none";
+            document.querySelector(".os").style.display = "none";
+            document.querySelector(".mc").style.display = "none";
+            document.querySelector(".p1").classList.remove("active");
+            document.querySelector(".p2").classList.remove("active");
+            document.querySelector(".p3").classList.remove("active");
+            document.querySelector(".p4").classList.remove("active");
+            document.querySelector(".p5").classList.remove("active");
+            document.querySelector(".p6").classList.remove("active");
+            document.querySelector(".p7").classList.add("active");
+            document.querySelector(".p8").classList.remove("active");
+            document.querySelector(".p9").classList.remove("active");
+            document.querySelector(".p10").classList.remove("active");
+            document.querySelector(".p11").classList.remove("active");
+            document.querySelector(".p12").classList.remove("active");
+            document.querySelector(".ndp").style.display = "none";
+            
+            
+        }
+
+        function itp(){
+            document.querySelector(".fose").style.display = "none";
+            document.querySelector(".pij").style.display = "none";
+            document.querySelector(".ita").style.display = "none";
+            document.querySelector(".eamos").style.display = "none";
+            document.querySelector(".itag").style.display = "none";
+            document.querySelector(".cd").style.display = "none";
+            document.querySelector(".focf").style.display = "none";
+            document.querySelector(".itp").style.display = "block";
+            document.querySelector(".wd").style.display = "none";
+            document.querySelector(".cs").style.display = "none";
+            document.querySelector(".os").style.display = "none";
+            document.querySelector(".mc").style.display = "none";
+            document.querySelector(".p1").classList.remove("active");
+            document.querySelector(".p2").classList.remove("active");
+            document.querySelector(".p3").classList.remove("active");
+            document.querySelector(".p4").classList.remove("active");
+            document.querySelector(".p5").classList.remove("active");
+            document.querySelector(".p6").classList.remove("active");
+            document.querySelector(".p7").classList.remove("active");
+            document.querySelector(".p8").classList.add("active");
+            document.querySelector(".p9").classList.remove("active");
+            document.querySelector(".p10").classList.remove("active");
+            document.querySelector(".p11").classList.remove("active");
+            document.querySelector(".p12").classList.remove("active");
+            document.querySelector(".ndp").style.display = "none";
+
+           
+            
+        }
+
+        function wd(){
+            document.querySelector(".fose").style.display = "none";
+            document.querySelector(".pij").style.display = "none";
+            document.querySelector(".ita").style.display = "none";
+            document.querySelector(".eamos").style.display = "none";
+            document.querySelector(".itag").style.display = "none";
+            document.querySelector(".cd").style.display = "none";
+            document.querySelector(".focf").style.display = "none";
+            document.querySelector(".itp").style.display = "none";
+            document.querySelector(".wd").style.display = "block";
+            document.querySelector(".cs").style.display = "none";
+            document.querySelector(".os").style.display = "none";
+            document.querySelector(".mc").style.display = "none";
+            document.querySelector(".p1").classList.remove("active");
+            document.querySelector(".p2").classList.remove("active");
+            document.querySelector(".p3").classList.remove("active");
+            document.querySelector(".p4").classList.remove("active");
+            document.querySelector(".p5").classList.remove("active");
+            document.querySelector(".p6").classList.remove("active");
+            document.querySelector(".p7").classList.remove("active");
+            document.querySelector(".p8").classList.remove("active");
+            document.querySelector(".p9").classList.add("active");
+            document.querySelector(".p10").classList.remove("active");
+            document.querySelector(".p11").classList.remove("active");
+            document.querySelector(".p12").classList.remove("active");
+            document.querySelector(".ndp").style.display = "none";
+            
+           
+        }
+
+        function cs(){
+            document.querySelector(".fose").style.display = "none";
+            document.querySelector(".pij").style.display = "none";
+            document.querySelector(".ita").style.display = "none";
+            document.querySelector(".eamos").style.display = "none";
+            document.querySelector(".itag").style.display = "none";
+            document.querySelector(".cd").style.display = "none";
+            document.querySelector(".focf").style.display = "none";
+            document.querySelector(".itp").style.display = "none";
+            document.querySelector(".wd").style.display = "none";
+            document.querySelector(".cs").style.display = "block";
+            document.querySelector(".os").style.display = "none";
+            document.querySelector(".mc").style.display = "none";
+            document.querySelector(".p1").classList.remove("active");
+            document.querySelector(".p2").classList.remove("active");
+            document.querySelector(".p3").classList.remove("active");
+            document.querySelector(".p4").classList.remove("active");
+            document.querySelector(".p5").classList.remove("active");
+            document.querySelector(".p6").classList.remove("active");
+            document.querySelector(".p7").classList.remove("active");
+            document.querySelector(".p8").classList.remove("active");
+            document.querySelector(".p9").classList.remove("active");
+            document.querySelector(".p10").classList.add("active");
+            document.querySelector(".p11").classList.remove("active");
+            document.querySelector(".p12").classList.remove("active");
+            document.querySelector(".ndp").style.display = "none";
+           
+           
+        }
+
+        function os(){
+            document.querySelector(".fose").style.display = "none";
+            document.querySelector(".pij").style.display = "none";
+            document.querySelector(".ita").style.display = "none";
+            document.querySelector(".eamos").style.display = "none";
+            document.querySelector(".itag").style.display = "none";
+            document.querySelector(".cd").style.display = "none";
+            document.querySelector(".focf").style.display = "none";
+            document.querySelector(".itp").style.display = "none";
+            document.querySelector(".wd").style.display = "none";
+            document.querySelector(".cs").style.display = "none";
+            document.querySelector(".os").style.display = "block";
+            document.querySelector(".mc").style.display = "none";
+            document.querySelector(".p1").classList.remove("active");
+            document.querySelector(".p2").classList.remove("active");
+            document.querySelector(".p3").classList.remove("active");
+            document.querySelector(".p4").classList.remove("active");
+            document.querySelector(".p5").classList.remove("active");
+            document.querySelector(".p6").classList.remove("active");
+            document.querySelector(".p7").classList.remove("active");
+            document.querySelector(".p8").classList.remove("active");
+            document.querySelector(".p9").classList.remove("active");
+            document.querySelector(".p10").classList.remove("active");
+            document.querySelector(".p11").classList.add("active");
+            document.querySelector(".p12").classList.remove("active");
+            document.querySelector(".ndp").style.display = "none";
+            
+            
+        }
+
+        function mc(){
+            document.querySelector(".fose").style.display = "none";
+            document.querySelector(".pij").style.display = "none";
+            document.querySelector(".ita").style.display = "none";
+            document.querySelector(".eamos").style.display = "none";
+            document.querySelector(".itag").style.display = "none";
+            document.querySelector(".cd").style.display = "none";
+            document.querySelector(".focf").style.display = "none";
+            document.querySelector(".itp").style.display = "none";
+            document.querySelector(".wd").style.display = "none";
+            document.querySelector(".cs").style.display = "none";
+            document.querySelector(".os").style.display = "none";
+            document.querySelector(".mc").style.display = "block";
+            document.querySelector(".p1").classList.remove("active");
+            document.querySelector(".p2").classList.remove("active");
+            document.querySelector(".p3").classList.remove("active");
+            document.querySelector(".p4").classList.remove("active");
+            document.querySelector(".p5").classList.remove("active");
+            document.querySelector(".p6").classList.remove("active");
+            document.querySelector(".p7").classList.remove("active");
+            document.querySelector(".p8").classList.remove("active");
+            document.querySelector(".p9").classList.remove("active");
+            document.querySelector(".p10").classList.remove("active");
+            document.querySelector(".p11").classList.remove("active");
+            document.querySelector(".p12").classList.add("active");
+            document.querySelector(".ndp").style.display = "none";
+            
+            
+
+        }
+
+
+    </script>
+    
+    
+</body>
+</html>
